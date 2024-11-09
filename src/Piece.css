@@ -1,0 +1,19 @@
+/* General styles for the piece */
+.piece {
+  position: relative; /* Ensure positioning context */
+  width: 75%; /* The piece takes up 75% of the cell width */
+  height: 75%; /* The piece takes up 75% of the cell height */
+  border-radius: 50%; /* Make the piece circular */
+  z-index: 2; /* Ensure the piece appears on top of the green background */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Black piece */
+.piece.black {
+  background-color: rgb(6, 5, 5); /* Black piece color */
+}
+
+/* White piece */
+.piece.white {
+  background-color: white; /* White piece color */
+}

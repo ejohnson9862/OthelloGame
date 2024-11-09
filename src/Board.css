@@ -1,0 +1,65 @@
+/* Board container: using grid layout */
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);  /* Create 8 equal-width columns */
+  grid-template-rows: repeat(8, 1fr);     /* Create 8 equal-height rows */
+  gap: 2px;  /* No gap between cells, ensuring everything fits tightly */
+  width: 54vmin; /* Use viewport units to make it responsive */
+  height: 52vmin; /* Maintain aspect ratio */
+  max-width: 600px; /* Optional: Max width limit */
+  max-height: 600px; /* Optional: Max height limit */
+  margin: 0 auto; /* Center the board horizontally */
+  border: 4px solid #333; /* Optional: Border around the board */
+  background-color: #f6f2f2e7; /* Dark background for the board */
+  box-sizing: border-box;  /* Ensures padding and border are included in width/height */
+  position: relative;
+  
+}
+
+
+/* Each individual cell on the board */
+.cell {
+  background-color:#0c3c16;/* Default grey background color */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  cursor: pointer;  /* Make cells clickable */
+  border: 1px solid #070707e7; /* Add grid lines for each cell */
+  transition: background-color 0.2s;  /* Smooth background-color transition */
+  box-sizing: border-box; /* Ensure padding and border don't affect cell size */
+  margin: 1px; /* Remove margin to eliminate unwanted space */
+  padding: 1px; /* Remove any default padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+/* When the cell is clicked and contains a black piece */
+.cell.black {
+  width: 1; /* Reduced width to leave space for borders */
+  height: 1; /* Reduced height to leave space for borders */
+  background-color: rgb(6, 5, 5); /* Black piece color */
+  border-radius: 50%; /* Round the piece */
+}
+
+/* When the cell is clicked and contains a white piece */
+.cell.white {
+  width: 1; /* Reduced width to leave space for borders */
+  height: 1;
+  background-color: white; /* White piece color */
+  border-radius: 50%; /* Round the piece */
+  /* position: absolute;
+  z-index: 2; ensures the piece is above the grid */
+}
+
+/* Optional: Hover effect to indicate the cell is clickable */
+.cell:hover {
+  background-color: #861818; /* Lighten on hover */
+}
+
+
+/* Optional: Add smooth transition for cell's background color */
+.cell {
+  transition: background-color 0.3s ease;
+}
