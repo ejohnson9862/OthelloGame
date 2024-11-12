@@ -4,11 +4,11 @@
   grid-template-columns: repeat(8, 1fr);  /* Create 8 equal-width columns */
   grid-template-rows: repeat(8, 1fr);     /* Create 8 equal-height rows */
   gap: 2px;  /* No gap between cells, ensuring everything fits tightly */
-  width: 54vmin; /* Use viewport units to make it responsive */
-  height: 52vmin; /* Maintain aspect ratio */
+  width: 65vmin; /* Use viewport units to make it responsive */
+  height: 61vmin; /* Maintain aspect ratio */
   max-width: 600px; /* Optional: Max width limit */
   max-height: 600px; /* Optional: Max height limit */
-  margin: 0 auto; /* Center the board horizontally */
+  margin: 1px auto; /* Center the board horizontally */
   border: 4px solid #333; /* Optional: Border around the board */
   background-color: #f6f2f2e7; /* Dark background for the board */
   box-sizing: border-box;  /* Ensures padding and border are included in width/height */
